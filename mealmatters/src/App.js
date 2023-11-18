@@ -1,14 +1,17 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Components/Login/Login';
-import Login from './Components/Login/Signup';
+import Signup from './Components/Login/Signup';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App (){
   return (
     <BrowserRouter>
-     <Route path='/' element={<Login />}></Route>
-     <Route path='/signup' element={<Signup />}></Route>
-    </BrowserRouter>  )
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/signup' element={<Signup />}></Route>
+      </Routes>
+   </BrowserRouter>   ) 
 }
 
 export default App
